@@ -133,6 +133,11 @@ public class AddStockController implements Initializable {
             Database db = new Database();
             Connection c = db.getConnection();
             c.createStatement().execute("insert into stock (sl,model,supplier,p_price,s_price) values ('"+ sl +"',"+ model_id +","+ supplier_id +","+ p_price +","+ s_price +")");
+            ResultSet rs = c.createStatement().executeQuery("SELECT * FROM stock order by id desc limit 1");
+            while(rs.next()){
+                c.createStatement().execute("insert into all_products (sl,model,supplier,p_price,s_price,stock_id) values ('"+ sl +"',"+ model_id +","+ supplier_id +","+ p_price +","+ s_price +","+ rs.getInt("id") +")");
+            }
+            
             c.close();
             
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

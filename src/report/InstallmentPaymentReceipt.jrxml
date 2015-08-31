@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
+<!-- 2015-08-05T00:31:54 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="565" pageHeight="310" columnWidth="565" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="95b3e797-559b-4ad8-aaea-8b09f994112d">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<parameter name="sl" class="java.lang.String"/>
+	<parameter name="date" class="java.lang.String"/>
+	<parameter name="customer_name" class="java.lang.String"/>
+	<parameter name="phone" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="category" class="java.lang.String"/>
+	<parameter name="model" class="java.lang.String"/>
+	<parameter name="serial_no" class="java.lang.String"/>
+	<parameter name="received_amount" class="java.lang.String"/>
+	<parameter name="word" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="310">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="10" y="10" width="542" height="290" uuid="96ff1c16-72d5-4269-b41d-6e3028125b68"/>
+				<frame>
+					<reportElement x="0" y="0" width="542" height="290" uuid="0972a27e-14f6-4142-9f04-2948f41913df">
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<box padding="10">
+						<topPen lineWidth="1.5" lineStyle="Dashed"/>
+						<leftPen lineWidth="1.5" lineStyle="Dashed"/>
+						<bottomPen lineWidth="1.5" lineStyle="Dashed"/>
+						<rightPen lineWidth="1.5" lineStyle="Dashed"/>
+					</box>
+					<staticText>
+						<reportElement key="" mode="Opaque" x="190" y="0" width="135" height="30" forecolor="#FFFFFF" backcolor="#030303" uuid="6e4d2623-7431-40de-88eb-154cbf3da27e"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="SansSerif" size="15" isBold="true" isItalic="true"/>
+							<paragraph lineSpacing="Single"/>
+						</textElement>
+						<text><![CDATA[Payment Receipt]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="0" y="30" width="229" height="39" uuid="7aec095e-5449-4bbc-b785-673374efd91f"/>
+						<textElement>
+							<font size="24" isBold="true"/>
+						</textElement>
+						<text><![CDATA[R.S ELECTRONICS]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="56" width="279" height="18" uuid="99553ede-b66d-4fdb-b68d-57a4836b3322"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[17, Khan-A-Subar Road, Opposite of Century Plaza,]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="69" width="279" height="18" uuid="20efed9e-3bff-446d-9a90-d5fd9d1a4a5d"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Daulatpur, Khulna. Mob: 01711-345167, 01919-345167]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="362" y="3" width="48" height="17" uuid="17446bcc-32a6-4298-a2dc-8246beed77f1"/>
+						<textElement>
+							<font size="12" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Sl. No. : ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="374" y="23" width="41" height="18" uuid="7b0c7e45-9129-48eb-896f-dc493e6f350e"/>
+						<textElement>
+							<font size="12" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Date : ]]></text>
+					</staticText>
+					<line>
+						<reportElement x="1" y="84" width="519" height="2" uuid="97833975-8f4f-4aec-8bc9-dc60928ed438"/>
+					</line>
+					<textField>
+						<reportElement x="417" y="3" width="100" height="16" uuid="248f8cb0-573a-4e9c-a3d8-bc3cf07b393f"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{sl}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="417" y="23" width="100" height="22" uuid="8bc9ce7e-be66-4e49-bba9-844f75dcc8a8"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="1" y="90" width="100" height="20" uuid="482b8704-d59c-4dec-801d-3ab809d137ed"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Customer's Name : ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="312" y="91" width="49" height="20" uuid="d9b6877f-3fcf-4bc8-b1c7-33d844caff30"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Phone :]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="1" y="107" width="59" height="20" uuid="8a0fc22a-29e2-49e0-82f9-46fce30b3133"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Address : ]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="391" y="247" width="123" height="18" uuid="b88b04a4-267d-4ba8-9612-37024bf03954"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Manager's Signature]]></text>
+					</staticText>
+					<line>
+						<reportElement x="380" y="244" width="131" height="1" uuid="ac8fa099-c975-4d69-8d00-9eb018cd49cd"/>
+					</line>
+					<staticText>
+						<reportElement x="12" y="250" width="123" height="18" uuid="512a22af-aed0-40e5-95dd-f6a0f0c76fe0"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Customer's Signature]]></text>
+					</staticText>
+					<line>
+						<reportElement x="4" y="247" width="131" height="1" uuid="d6fb25a6-c19f-41af-9c78-e1eedaa3fe2d"/>
+					</line>
+					<textField>
+						<reportElement x="105" y="90" width="207" height="17" uuid="2ef35144-c3ea-44d4-bacd-17be33af33ec"/>
+						<textElement>
+							<font size="11" isBold="true" isItalic="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{customer_name}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="364" y="92" width="100" height="19" uuid="50eda047-5957-4f47-865c-cffacebd142a"/>
+						<textElement>
+							<font size="11" isBold="true" isItalic="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{phone}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="60" y="108" width="457" height="15" uuid="becca958-3117-4cc8-b9fa-803a9fdac765"/>
+						<textElement>
+							<font size="11" isBold="true" isItalic="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$P{address}]]></textFieldExpression>
+					</textField>
+					<line>
+						<reportElement x="2" y="129" width="518" height="1" uuid="5ae296d8-fd62-49e6-b2e9-a6967d128c88"/>
+					</line>
+					<staticText>
+						<reportElement x="2" y="132" width="89" height="19" uuid="7182a59c-381e-4e9f-afb9-5f732c1e0a5a"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Item's Category:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="2" y="151" width="89" height="19" uuid="58e2ba2a-7b1d-40ce-a30b-270ec320d105"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Item's Model:]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="2" y="170" width="89" height="19" uuid="042a42b2-69e8-4758-a840-9555565e22f0"/>
+						<textElement>
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Item's Serial:]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="91" y="132" width="199" height="19" uuid="0fb24d67-73f3-489c-bf0c-0a56b0e1f462"/>
+						<textFieldExpression><![CDATA[$P{category}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="91" y="151" width="199" height="19" uuid="986d531f-2729-4031-bece-b79620075820"/>
+						<textFieldExpression><![CDATA[$P{model}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="91" y="170" width="199" height="19" uuid="e79542ea-0846-4b2a-a2c5-ab5fc672343b"/>
+						<textFieldExpression><![CDATA[$P{serial_no}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="298" y="132" width="129" height="19" uuid="31ecea1c-b7a9-4fdc-ba5d-1daabacd0bb7"/>
+						<textElement verticalAlignment="Middle">
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Payment Received (TK):]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="427" y="132" width="93" height="19" uuid="87ec5284-94c2-4e9c-8e93-2f464b0cbaa4"/>
+						<textElement verticalAlignment="Middle"/>
+						<textFieldExpression><![CDATA[$P{received_amount}]]></textFieldExpression>
+					</textField>
+					<staticText>
+						<reportElement x="2" y="189" width="63" height="21" uuid="152e8a77-af75-4480-8d51-b02cc68cac13"/>
+						<textElement verticalAlignment="Middle">
+							<font size="11" isBold="true"/>
+						</textElement>
+						<text><![CDATA[In Word:]]></text>
+					</staticText>
+					<textField>
+						<reportElement x="65" y="189" width="455" height="21" uuid="72443f3b-86dc-49ec-90af-f94179089590"/>
+						<textElement verticalAlignment="Middle"/>
+						<textFieldExpression><![CDATA[$P{word}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</title>
+</jasperReport>

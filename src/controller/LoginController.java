@@ -6,7 +6,11 @@
 package controller;
 
 import jamuna.Database;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,7 +42,7 @@ public class LoginController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        System.out.println();
     }    
 
     @FXML
@@ -51,7 +55,7 @@ public class LoginController implements Initializable {
             Connection c = db.getConnection();
             ResultSet rs = c.createStatement().executeQuery("select * from users where username='"+ username +"'");
             if(rs.getString("password").equals(password)){
-                Parent root = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+                Parent root = FXMLLoader.load(getClass().getResource("/view/Navbar.fxml"));
                 Scene scene = this.username.getScene();
                 Stage stage = (Stage)this.username.getScene().getWindow();
                 scene.setRoot(root);

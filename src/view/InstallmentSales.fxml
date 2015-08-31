@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="702.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.InstallmentSalesController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Installment Sales">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="42.0" prefHeight="2.0" prefWidth="668.0" />
+      <Label layoutX="14.0" layoutY="54.0" text="Select Customer" />
+      <ComboBox fx:id="customer" layoutX="114.0" layoutY="50.0" onAction="#onSelectCustomer" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="442.0" layoutY="63.0" text="Date" />
+      <DatePicker fx:id="date" layoutX="497.0" layoutY="59.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="387.0" layoutY="90.0" text="Select Category" />
+      <ComboBox fx:id="category" layoutX="497.0" layoutY="89.0" onAction="#onSelectCategory" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="14.0" layoutY="88.0" text="Phone" />
+      <TextField fx:id="phone" editable="false" layoutX="114.0" layoutY="84.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="14.0" layoutY="116.0" text="Address" />
+      <TextArea fx:id="address" editable="false" layoutX="114.0" layoutY="116.0" prefHeight="83.0" prefWidth="185.0" />
+      <ComboBox fx:id="model" layoutX="497.0" layoutY="121.0" onAction="#onSelectModel" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="401.0" layoutY="125.0" text="Select Model" />
+      <Label layoutX="413.0" layoutY="160.0" text="Select Item" />
+      <ComboBox fx:id="item" layoutX="497.0" layoutY="156.0" onAction="#onSelectItem" prefHeight="25.0" prefWidth="185.0" />
+      <Separator layoutX="342.0" layoutY="41.0" orientation="VERTICAL" prefHeight="171.0" prefWidth="9.0" />
+      <Separator layoutX="14.0" layoutY="211.0" prefHeight="3.0" prefWidth="668.0" />
+      <TextField fx:id="cash_price" layoutX="114.0" layoutY="223.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="14.0" layoutY="227.0" text="Cash Price" />
+      <TextField fx:id="hire_price" layoutX="114.0" layoutY="255.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="14.0" layoutY="259.0" text="Hire Price" />
+      <Label layoutX="14.0" layoutY="290.0" text="Down Payment" />
+      <TextField fx:id="down_payment" layoutX="114.0" layoutY="286.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="358.0" layoutY="227.0" text="Number of Installments" />
+      <TextField fx:id="number_of_installment" layoutX="497.0" layoutY="223.0" prefHeight="25.0" prefWidth="185.0" />
+      <Label layoutX="358.0" layoutY="259.0" text="Monthly Installments" />
+      <TextField fx:id="monthly_installment" layoutX="497.0" layoutY="255.0" prefHeight="25.0" prefWidth="185.0" />
+      <Separator layoutX="13.0" layoutY="332.0" prefHeight="3.0" prefWidth="668.0" />
+      <Button fx:id="save" layoutX="569.0" layoutY="361.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+      <Button fx:id="cancel" layoutX="629.0" layoutY="361.0" mnemonicParsing="false" onAction="#onCancelButtonClick" text="Cancel" />
+   </children>
+</AnchorPane>

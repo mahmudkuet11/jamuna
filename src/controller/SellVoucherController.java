@@ -201,8 +201,8 @@ public class SellVoucherController implements Initializable {
         
         String date = "";
         try {
-            date = String.valueOf(new SimpleDateFormat("yyyy-MM-dd").parse(this.date.getValue().toString()).getTime());
-        } catch (ParseException ex) {
+            date = this.date.getValue().toString();
+        } catch (Exception ex) {
             Logger.getLogger(SellVoucherController.class.getName()).log(Level.SEVERE, null, ex);
         }
         String customer_name = this.name.getText();

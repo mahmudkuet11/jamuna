@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="699.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.StockReportController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Stock Report">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="41.0" prefHeight="0.0" prefWidth="668.0" />
+      <ScrollPane layoutX="14.0" layoutY="55.0" prefViewportHeight="333.0" prefViewportWidth="668.0">
+         <content>
+            <TableView fx:id="table" layoutX="14.0" layoutY="55.0" prefHeight="333.0" prefWidth="668.0">
+              <columns>
+                <TableColumn fx:id="category" prefWidth="110.0" text="Category" />
+                <TableColumn fx:id="model" prefWidth="125.0" text="Model" />
+                  <TableColumn fx:id="serial" prefWidth="114.0" text="Serial" />
+                  <TableColumn fx:id="p_price" prefWidth="98.0" text="Purchase Price" />
+                  <TableColumn fx:id="s_price" prefWidth="99.0" text="Sales Price" />
+                  <TableColumn fx:id="supplier" prefWidth="117.0" text="Supplier" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

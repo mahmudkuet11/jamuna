@@ -5,6 +5,8 @@
  */
 package jamuna;
 
+import java.awt.Window;
+import java.awt.image.ImageObserver;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,7 +21,7 @@ public class Jamuna extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
         
         Scene scene = new Scene(root);
         

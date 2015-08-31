@@ -1,36 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NavbarController">
+<AnchorPane id="AnchorPane" prefHeight="421.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NavbarController">
    <children>
-         <MenuBar fx:id="menubar" layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.bottomAnchor="375.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <MenuBar fx:id="menubar" layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
            <menus>
-             <Menu mnemonicParsing="false" text="File">
+            <Menu mnemonicParsing="false" text="Maintenance ">
                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onAddCustomerClick" text="Add customer" />
                  <MenuItem mnemonicParsing="false" onAction="#onAddNewCategoryClick" text="Add new category" />
                   <MenuItem mnemonicParsing="false" onAction="#onAddNewModelClick" text="Add new model" />
                   <MenuItem mnemonicParsing="false" onAction="#onAddStockClick" text="Add stock" />
                   <MenuItem mnemonicParsing="false" onAction="#onAddSupplierClick" text="Add supplier" />
-                  <MenuItem mnemonicParsing="false" onAction="#onAddCustomerClick" text="Add customer" />
+               </items>
+            </Menu>
+             <Menu mnemonicParsing="false" text="Sales and Hire">
+               <items>
                   <MenuItem mnemonicParsing="false" onAction="#onSellVoucherClick" text="Sell Voucher" />
+                  <MenuItem mnemonicParsing="false" onAction="#onInstallmentSaleClick" text="Installment Sales" />
+                  <MenuItem mnemonicParsing="false" onAction="#onInstallmentPaymentClick" text="Installment Payment" />
                </items>
              </Menu>
-             <Menu mnemonicParsing="false" text="Edit">
+             <Menu mnemonicParsing="false" text="Report">
                <items>
-                 <MenuItem mnemonicParsing="false" text="Delete" />
+                 <MenuItem mnemonicParsing="false" onAction="#onSellReportClick" text="Sell Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCustomerReportClick" text="Customer Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#onSupplierReportClick" text="Supplier Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#onStockReportClick" text="Stock Report" />
                </items>
              </Menu>
-             <Menu mnemonicParsing="false" text="Help">
+             <Menu mnemonicParsing="false" text="Account">
                <items>
-                 <MenuItem mnemonicParsing="false" text="About" />
+                 <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" />
                </items>
              </Menu>
            </menus>
          </MenuBar>
+      <ImageView fx:id="dashboard_image" fitHeight="364.0" fitWidth="601.0" layoutX="6.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="35.0">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
    </children>
 </AnchorPane>
