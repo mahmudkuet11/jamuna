@@ -246,5 +246,22 @@ public class NavbarController implements Initializable{
             Logger.getLogger(NavbarController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @FXML
+    private void onDueReportClick(ActionEvent event) {
+        try {
+            Parent root;
+            root = FXMLLoader.load(getClass().getResource("/view/DueReport.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            scene.setRoot(root);
+            stage.setResizable(false);
+            stage.setTitle("Due Report");
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException ex) {
+            Logger.getLogger(NavbarController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

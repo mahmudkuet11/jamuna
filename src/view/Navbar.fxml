@@ -34,6 +34,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#onCustomerReportClick" text="Customer Report" />
                   <MenuItem mnemonicParsing="false" onAction="#onSupplierReportClick" text="Supplier Report" />
                   <MenuItem mnemonicParsing="false" onAction="#onStockReportClick" text="Stock Report" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDueReportClick" text="Due Report" />
                </items>
              </Menu>
              <Menu mnemonicParsing="false" text="Account">
