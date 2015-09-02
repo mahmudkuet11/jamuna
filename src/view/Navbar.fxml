@@ -45,6 +45,7 @@
             <Menu mnemonicParsing="false" text="Chalan Memo">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#onNewChallanMemoClick" text="New Chalan Memo" />
+                  <MenuItem mnemonicParsing="false" onAction="#onViewChallanMemoClick" text="View Chalan Memo" />
               </items>
             </Menu>
            </menus>
