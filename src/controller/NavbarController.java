@@ -263,5 +263,22 @@ public class NavbarController implements Initializable{
             Logger.getLogger(NavbarController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @FXML
+    private void onNewChallanMemoClick(ActionEvent event) {
+        try {
+            Parent root;
+            root = FXMLLoader.load(getClass().getResource("/view/ChallanMemo.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            scene.setRoot(root);
+            stage.setResizable(false);
+            stage.setTitle("Chalan Memo");
+            stage.setScene(scene);
+            stage.showAndWait();
+        } catch (IOException ex) {
+            Logger.getLogger(NavbarController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

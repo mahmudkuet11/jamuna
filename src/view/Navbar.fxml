@@ -12,15 +12,6 @@
    <children>
          <MenuBar fx:id="menubar" layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
            <menus>
-            <Menu mnemonicParsing="false" text="Maintenance ">
-               <items>
-                  <MenuItem mnemonicParsing="false" onAction="#onAddCustomerClick" text="Add customer" />
-                 <MenuItem mnemonicParsing="false" onAction="#onAddNewCategoryClick" text="Add new category" />
-                  <MenuItem mnemonicParsing="false" onAction="#onAddNewModelClick" text="Add new model" />
-                  <MenuItem mnemonicParsing="false" onAction="#onAddStockClick" text="Add stock" />
-                  <MenuItem mnemonicParsing="false" onAction="#onAddSupplierClick" text="Add supplier" />
-               </items>
-            </Menu>
              <Menu mnemonicParsing="false" text="Sales and Hire">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#onSellVoucherClick" text="Sell Voucher" />
@@ -37,11 +28,25 @@
                   <MenuItem mnemonicParsing="false" onAction="#onDueReportClick" text="Due Report" />
                </items>
              </Menu>
+            <Menu mnemonicParsing="false" text="Maintenance ">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#onAddCustomerClick" text="Add customer" />
+                 <MenuItem mnemonicParsing="false" onAction="#onAddNewCategoryClick" text="Add new category" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddNewModelClick" text="Add new model" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddStockClick" text="Add stock" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAddSupplierClick" text="Add supplier" />
+               </items>
+            </Menu>
              <Menu mnemonicParsing="false" text="Account">
                <items>
                  <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Logout" />
                </items>
              </Menu>
+            <Menu mnemonicParsing="false" text="Chalan Memo">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#onNewChallanMemoClick" text="New Chalan Memo" />
+              </items>
+            </Menu>
            </menus>
          </MenuBar>
       <ImageView fx:id="dashboard_image" fitHeight="364.0" fitWidth="601.0" layoutX="6.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="35.0">

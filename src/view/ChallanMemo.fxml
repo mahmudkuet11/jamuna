@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="430.0" prefWidth="708.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.ChallanMemoController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Chalan Memo">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="30.0" prefHeight="7.0" prefWidth="686.0" />
+      <Button fx:id="add_new" layoutX="14.0" layoutY="102.0" mnemonicParsing="false" onAction="#onAddNewButtonClick" text="Add New" />
+      <Label layoutX="14.0" layoutY="47.0" text="Select Date" />
+      <DatePicker fx:id="date" layoutX="14.0" layoutY="64.0" />
+      <Label layoutX="215.0" layoutY="47.0" text="Company" />
+      <TextField fx:id="company" layoutX="215.0" layoutY="64.0" prefHeight="25.0" prefWidth="163.0" />
+      <AnchorPane layoutX="14.0" layoutY="160.0" prefHeight="261.0" prefWidth="688.0">
+         <children>
+            <ScrollPane prefHeight="225.0" prefViewportHeight="222.0" prefViewportWidth="686.0" prefWidth="688.0">
+               <content>
+                  <VBox fx:id="container" layoutX="29.0" layoutY="15.0" prefHeight="222.0" prefWidth="685.0" spacing="5.0" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </content>
+            </ScrollPane>
+            <Button layoutX="633.0" layoutY="229.0" mnemonicParsing="false" onAction="#onSaveButtonClick" text="Save" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="136.0" text="Product Name" />
+      <Label layoutX="169.0" layoutY="136.0" text="Quantity" />
+      <Label layoutX="321.0" layoutY="136.0" text="Rate" />
+      <Label layoutX="475.0" layoutY="136.0" text="Total" />
+      <Label layoutX="630.0" layoutY="136.0" text="Delete Row" />
+   </children>
+</AnchorPane>
