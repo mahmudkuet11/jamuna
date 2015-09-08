@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
-<!-- 2015-09-02T16:21:15 -->
+<!-- 2015-09-08T11:09:55 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ChalanMemo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e70937b1-6141-428a-978e-8ea7b644fb1d">
 	<parameter name="company" class="java.lang.String"/>
 	<parameter name="date" class="java.lang.String"/>
@@ -58,6 +58,10 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{company}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="0" y="0" width="140" height="50" uuid="e065707d-3b3c-4636-88c7-7d8e5b25ea25"/>
+				<imageExpression><![CDATA["C:/Users/mohar/JaspersoftWorkspace/Jamuna/JAMUNA.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<columnHeader>

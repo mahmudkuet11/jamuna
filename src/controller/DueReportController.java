@@ -93,7 +93,8 @@ public class DueReportController implements Initializable {
                 float paid = rs6.getFloat("amount");
                 float total = down_payment + paid;
                 float due = price - total;
-                this.list.add(new DueReport(sl, category, model, name, phone, address, price, total, due));
+                if(due > 0)
+                    this.list.add(new DueReport(sl, category, model, name, phone, address, price, total, due));
             }
         } catch (SQLException ex) {
             Logger.getLogger(DueReportController.class.getName()).log(Level.SEVERE, null, ex);

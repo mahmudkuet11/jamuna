@@ -8,7 +8,10 @@ package controller;
 import jamuna.Database;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -67,13 +70,15 @@ public class AddNewSupplierController implements Initializable {
             alert.setGraphic(new ImageView(new Image("/images/success.jpg")));
             alert.showAndWait();
             
-        }catch(Exception e){
+        }catch(Exception ex){
+            Logger.getLogger(AddNewSupplierController.class.getName()).log(Level.SEVERE, null, ex);
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setContentText("Sorry!! there is an error. Please try again.");
             alert.setGraphic(new ImageView(new Image("/images/error.jpg")));
             alert.showAndWait();
         }
+        
         
     }
 
