@@ -5,11 +5,11 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,7 +23,6 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import model.Category;
 
 /**
@@ -72,7 +71,15 @@ public class AddNewModelController implements Initializable {
         } catch (Exception ex) {
             Logger.getLogger(AddNewModelController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        new AutoCompleteComboBoxListener<>(this.category);
+        this.category.setOnHiding((e)->{
+            Category a = this.category.getSelectionModel().getSelectedItem();
+            this.category.setEditable(false);
+            this.category.getSelectionModel().select(a);
+        });
+        this.category.setOnShowing((e)->{
+            this.category.setEditable(true);
+        });
         
     }    
 

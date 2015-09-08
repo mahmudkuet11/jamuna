@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
-<!-- 2015-06-26T01:56:39 -->
+<!-- 2015-09-08T10:34:04 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="562" pageHeight="375" columnWidth="562" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="95b3e797-559b-4ad8-aaea-8b09f994112d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="sl" class="java.lang.String"/>
@@ -296,6 +296,10 @@
 					</textElement>
 					<textFieldExpression><![CDATA[$P{total_words}]]></textFieldExpression>
 				</textField>
+				<image>
+					<reportElement x="1" y="2" width="221" height="50" uuid="b4df6ed0-2d18-4c70-aea7-9ac377b7eb22"/>
+					<imageExpression><![CDATA["C:/Users/mohar/JaspersoftWorkspace/Jamuna/JAMUNA.png"]]></imageExpression>
+				</image>
 			</frame>
 		</band>
 	</detail>

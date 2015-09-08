@@ -51,8 +51,9 @@ public class LoginController implements Initializable {
         String password = this.password.getText();
         
         Database db = new Database();
+        Connection c = null;
         try {
-            Connection c = db.getConnection();
+            c = db.getConnection();
             ResultSet rs = c.createStatement().executeQuery("select * from users where username='"+ username +"'");
             if(rs.getString("password").equals(password)){
                 Parent root = FXMLLoader.load(getClass().getResource("/view/Navbar.fxml"));
@@ -67,6 +68,12 @@ public class LoginController implements Initializable {
             c.close();
         } catch (Exception ex) {
             System.out.println("error");
+        }finally{
+            try {
+                c.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     

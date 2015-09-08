@@ -5,6 +5,7 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import jamuna.EnglishNumberToWords;
 import jamuna.Report;
@@ -93,11 +94,30 @@ public class InstallmentPaymentController implements Initializable {
                 Logger.getLogger(InstallmentPaymentController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        new AutoCompleteComboBoxListener<>(this.select_customer);
+        this.select_customer.setOnHiding((e)->{
+            Customer a = this.select_customer.getSelectionModel().getSelectedItem();
+            this.select_customer.setEditable(false);
+            this.select_customer.getSelectionModel().select(a);
+        });
+        this.select_customer.setOnShowing((e)->{
+            this.select_customer.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.select_serial);
+        this.select_serial.setOnHiding((e)->{
+            Stock a = this.select_serial.getSelectionModel().getSelectedItem();
+            this.select_serial.setEditable(false);
+            this.select_serial.getSelectionModel().select(a);
+        });
+        this.select_serial.setOnShowing((e)->{
+            this.select_serial.setEditable(true);
+        });
     }    
 
     @FXML
     private void onCustomerSelect(ActionEvent event) {
-
+        this.select_serial.getItems().clear();
         String name = this.select_customer.getSelectionModel().getSelectedItem().getName();
         String phone = this.select_customer.getSelectionModel().getSelectedItem().getPhone();
         String address = this.select_customer.getSelectionModel().getSelectedItem().getAddress();

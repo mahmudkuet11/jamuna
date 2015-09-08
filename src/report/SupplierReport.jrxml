@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
-<!-- 2015-08-06T10:55:03 -->
+<!-- 2015-09-08T10:55:19 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SellReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="892ef86f-c3f5-485b-83fe-533a911e09e0">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="supplier" class="java.lang.String"/>
@@ -53,6 +53,10 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{supplier}]]></textFieldExpression>
 			</textField>
+			<image>
+				<reportElement x="1" y="2" width="279" height="50" uuid="75480136-4cbf-4fac-be97-f9db9d1c815b"/>
+				<imageExpression><![CDATA["C:/Users/mohar/JaspersoftWorkspace/Jamuna/JAMUNA.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<columnHeader>

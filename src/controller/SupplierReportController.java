@@ -5,6 +5,7 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import jamuna.Report;
 import java.net.URL;
@@ -108,7 +109,15 @@ public class SupplierReportController implements Initializable {
                 Logger.getLogger(SupplierReportController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
+        new AutoCompleteComboBoxListener<>(this.select_supplier);
+        this.select_supplier.setOnHiding((e)->{
+            Supplier a = this.select_supplier.getSelectionModel().getSelectedItem();
+            this.select_supplier.setEditable(false);
+            this.select_supplier.getSelectionModel().select(a);
+        });
+        this.select_supplier.setOnShowing((e)->{
+            this.select_supplier.setEditable(true);
+        });
         
     }    
 

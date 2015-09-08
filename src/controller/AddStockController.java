@@ -5,14 +5,12 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -79,6 +77,33 @@ public class AddStockController implements Initializable {
         }catch(Exception e){
             
         }
+        new AutoCompleteComboBoxListener<>(this.category);
+        this.category.setOnHiding((e)->{
+            Category a = this.category.getSelectionModel().getSelectedItem();
+            this.category.setEditable(false);
+            this.category.getSelectionModel().select(a);
+        });
+        this.category.setOnShowing((e)->{
+            this.category.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.model);
+        this.model.setOnHiding((e)->{
+            Model a = this.model.getSelectionModel().getSelectedItem();
+            this.model.setEditable(false);
+            this.model.getSelectionModel().select(a);
+        });
+        this.model.setOnShowing((e)->{
+            this.model.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.supplier);
+        this.supplier.setOnHiding((e)->{
+            Supplier a = this.supplier.getSelectionModel().getSelectedItem();
+            this.supplier.setEditable(false);
+            this.supplier.getSelectionModel().select(a);
+        });
+        this.supplier.setOnShowing((e)->{
+            this.supplier.setEditable(true);
+        });
         
     }    
 

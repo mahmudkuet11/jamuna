@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.4.final using JasperReports Library version 6.0.4  -->
-<!-- 2015-08-08T10:26:28 -->
+<!-- 2015-09-08T10:45:43 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="570" pageHeight="310" columnWidth="570" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="95b3e797-559b-4ad8-aaea-8b09f994112d">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
@@ -247,6 +247,10 @@
 					<reportElement x="424" y="132" width="106" height="14" uuid="99f96560-0e0a-435f-b55d-fbe054ba60b4"/>
 					<textFieldExpression><![CDATA[$P{hire_price}]]></textFieldExpression>
 				</textField>
+				<image>
+					<reportElement x="1" y="1" width="189" height="50" uuid="e510b2df-4206-46e7-9f59-5311c3d1250f"/>
+					<imageExpression><![CDATA["C:/Users/mohar/JaspersoftWorkspace/Jamuna/JAMUNA.png"]]></imageExpression>
+				</image>
 			</frame>
 		</band>
 	</detail>

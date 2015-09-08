@@ -21,7 +21,7 @@ public class Database {
     public Connection getConnection() throws SQLException, ClassNotFoundException{
         Connection con = null;
         Class.forName("org.sqlite.JDBC");
-        con = DriverManager.getConnection("jdbc:sqlite:jamuna.sqlite");
+        con = DriverManager.getConnection("jdbc:sqlite:src\\jamuna.sqlite");
         return con;    
         
     }

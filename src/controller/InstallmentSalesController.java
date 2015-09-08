@@ -5,6 +5,7 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import jamuna.EnglishNumberToWords;
 import jamuna.Report;
@@ -115,6 +116,44 @@ public class InstallmentSalesController implements Initializable {
                 Logger.getLogger(InstallmentSalesController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        new AutoCompleteComboBoxListener<>(this.category);
+        this.category.setOnHiding((e)->{
+            Category a = this.category.getSelectionModel().getSelectedItem();
+            this.category.setEditable(false);
+            this.category.getSelectionModel().select(a);
+        });
+        this.category.setOnShowing((e)->{
+            this.category.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.customer);
+        this.customer.setOnHiding((e)->{
+            Customer a = this.customer.getSelectionModel().getSelectedItem();
+            this.customer.setEditable(false);
+            this.customer.getSelectionModel().select(a);
+        });
+        this.customer.setOnShowing((e)->{
+            this.customer.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.item);
+        this.item.setOnHiding((e)->{
+            Stock a = this.item.getSelectionModel().getSelectedItem();
+            this.item.setEditable(false);
+            this.item.getSelectionModel().select(a);
+        });
+        this.item.setOnShowing((e)->{
+            this.item.setEditable(true);
+        });
+        
+        new AutoCompleteComboBoxListener<>(this.model);
+        this.model.setOnHiding((e)->{
+            Model a = this.model.getSelectionModel().getSelectedItem();
+            this.model.setEditable(false);
+            this.model.getSelectionModel().select(a);
+        });
+        this.model.setOnShowing((e)->{
+            this.model.setEditable(true);
+        });
         
     }    
 

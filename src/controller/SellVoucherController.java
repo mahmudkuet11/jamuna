@@ -5,6 +5,7 @@
  */
 package controller;
 
+import jamuna.AutoCompleteComboBoxListener;
 import jamuna.Database;
 import jamuna.EnglishNumberToWords;
 import jamuna.Helper;
@@ -12,11 +13,9 @@ import jamuna.Report;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.text.ParseException;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Vector;
 import java.util.logging.Level;
@@ -32,7 +31,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.KeyEvent;
 import model.Category;
 import model.Customer;
@@ -107,6 +105,49 @@ public class SellVoucherController implements Initializable {
             
         }
         
+        
+        new AutoCompleteComboBoxListener<>(this.select_customer);
+        this.select_customer.setOnHiding((e)->{
+            Customer a = this.select_customer.getSelectionModel().getSelectedItem();
+            this.select_customer.setEditable(false);
+            this.select_customer.getSelectionModel().select(a);
+        });
+        this.select_customer.setOnShowing((e)->{
+            this.select_customer.setEditable(true);
+        });
+        
+        new AutoCompleteComboBoxListener<>(this.model);
+        this.model.setOnHiding((e)->{
+            Model a = this.model.getSelectionModel().getSelectedItem();
+            this.model.setEditable(false);
+            this.model.getSelectionModel().select(a);
+        });
+        this.model.setOnShowing((e)->{
+            this.model.setEditable(true);
+        });
+        
+        new AutoCompleteComboBoxListener<>(this.category);
+        this.category.setOnHiding((e)->{
+            Category a = this.category.getSelectionModel().getSelectedItem();
+            this.category.setEditable(false);
+            this.category.getSelectionModel().select(a);
+        });
+        this.category.setOnShowing((e)->{
+            this.category.setEditable(true);
+        });
+        new AutoCompleteComboBoxListener<>(this.sl_no);
+        this.sl_no.setOnHiding((e)->{
+            Stock a = this.sl_no.getSelectionModel().getSelectedItem();
+            this.sl_no.setEditable(false);
+            this.sl_no.getSelectionModel().select(a);
+        });
+        this.sl_no.setOnShowing((e)->{
+            this.sl_no.setEditable(true);
+        });
+        
+       
+     
+        
     }    
 
     @FXML
@@ -119,6 +160,7 @@ public class SellVoucherController implements Initializable {
             this.name.setText(rs.getString("name"));
             this.phone.setText(rs.getString("phone"));
             this.address.setText(rs.getString("address"));
+            c.close();
         } catch (Exception e) {
             
         }
@@ -211,10 +253,10 @@ public class SellVoucherController implements Initializable {
         int stock_id = this.sl_no.getSelectionModel().getSelectedItem().getId();
         float price = Float.parseFloat(this.price.getText());
         String word = this.price_word.getText();
-        
+        Connection c = null;
         try {
             Database db = new Database();
-            Connection c = db.getConnection();
+            c = db.getConnection();
             c.createStatement().execute("insert into sell (date,customer_name,phone,address,price,word,stock_id) values ('"+ date +"','"+ customer_name +"','"+ phone +"','"+ address +"',"+ price +",'"+ word +"',"+ stock_id +")");
             c.createStatement().execute("delete from stock where id=" + stock_id);
             c.close();
@@ -245,13 +287,21 @@ public class SellVoucherController implements Initializable {
             
             
             
-        } catch (Exception e) {
+        } catch (Exception ex) {
+            Logger.getLogger(SellVoucherController.class.getName()).log(Level.SEVERE, null, ex);
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setContentText("Sorry!! there is an error. Please try again");
             alert.setGraphic(new ImageView(new Image("/images/error.jpg")));
             alert.showAndWait();
+        }finally{
+            try {
+                c.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(SellVoucherController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
+        
         
     }
 
